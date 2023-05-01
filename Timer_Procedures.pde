@@ -34,8 +34,6 @@ void showTimer() {
 }
 //calculates timerScore based on player finished time
 public void timerScore() {
-  if (grid.isGameOver()){
     //gives player 1 points per second under 300
-    score += max((runningTimerEnd - runningTimerStart + timeElapsed) / 1000 - 300,  0);
-  }
+    score += max((300-(runningTimerEnd - runningTimerStart + timeElapsed) / 1000),  0);
 }
